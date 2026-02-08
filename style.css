@@ -156,6 +156,20 @@ nav a:hover {
   margin-top: var(--spacing-lg);
   display: flex;
   align-items: center;
+  gap: var(--spacing-md); /* Space between Email and Resume buttons */
+  flex-wrap: wrap;
+}
+
+/* Scroll Reveal Initial States */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cta-link {

@@ -83,7 +83,7 @@
         </div>
       </section>
 
-      <section class="skills-section">
+      <section class="skills-section reveal">
         <h2>Skills</h2>
         <div class="skills-grid">
           <div class="skill-category">
@@ -126,7 +126,7 @@
         </div>
       </section>
 
-      <section class="certifications-section">
+      <section class="certifications-section reveal">
         <h2>Certifications</h2>
         <div class="cert-grid">
           <div class="cert-card">
@@ -176,7 +176,7 @@
         </div>
       </section>
 
-      <section class="projects-section">
+      <section class="projects-section reveal">
         <h2>Latest Projects</h2>
         <div class="cards-grid">
           <div class="project-card">
@@ -286,7 +286,7 @@
         </div>
       </section>
 
-      <section class="other-projects-section">
+      <section class="other-projects-section reveal">
         <h2>More Noteworthy Projects</h2>
         <div class="other-projects-grid">
           <!-- SecureCheck -->
@@ -570,6 +570,27 @@
         resetBtn.style.display = "none";
         colorDiv.style.display = "none";
       }
+
+      // Scroll Reveal Logic
+      const revealElements = document.querySelectorAll(".reveal");
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              // revealObserver.unobserve(entry.target); // Optional: only reveal once
+            }
+          });
+        },
+        {
+          threshold: 0.1, // Trigger when 10% of element is visible
+        },
+      );
+
+      revealElements.forEach((el) => {
+        revealObserver.observe(el);
+      });
     </script>
   </body>
 </html>
