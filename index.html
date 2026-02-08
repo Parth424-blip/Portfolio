@@ -23,6 +23,9 @@
     <header>
       <a href="/" class="logo-text">Parth Tiwari</a>
       <nav>
+        <button id="theme-toggle" class="theme-btn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
         <a target="_blank" href="https://github.com/Parth424-blip"
           ><i class="fa-brands fa-github"></i> <span>GitHub</span></a
         >
@@ -53,6 +56,13 @@
             href="mailto:tiwariparth339@gmail.com"
           >
             Email me <i class="fa-solid fa-arrow-right link-arrow"></i>
+          </a>
+          <a
+            class="cta-link secondary"
+            target="_blank"
+            href="public/resume.pdf"
+          >
+            Download CV <i class="fa-solid fa-download"></i>
           </a>
         </div>
 
@@ -481,6 +491,19 @@
             </div>
           </div>
         </div>
+
+        <div class="github-stats-container">
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=Parth424-blip&show_icons=true&theme=transparent&hide_border=true&title_color=6366f1&icon_color=6366f1&text_color=ededed"
+            alt="GitHub Stats"
+            class="stats-img"
+          />
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=Parth424-blip&layout=compact&theme=transparent&hide_border=true&title_color=6366f1&text_color=ededed"
+            alt="Top Languages"
+            class="stats-img"
+          />
+        </div>
       </section>
     </main>
     <footer>
@@ -493,6 +516,31 @@
     </footer>
 
     <script>
+      // Theme Toggle Logic
+      const themeToggle = document.getElementById("theme-toggle");
+      const icon = themeToggle.querySelector("i");
+
+      // Check for saved user preference
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        document.body.classList.add("light-theme");
+        icon.classList.replace("fa-moon", "fa-sun");
+      }
+
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-theme");
+        const isLight = document.body.classList.contains("light-theme");
+
+        // Update icon
+        if (isLight) {
+          icon.classList.replace("fa-moon", "fa-sun");
+          localStorage.setItem("theme", "light");
+        } else {
+          icon.classList.replace("fa-sun", "fa-moon");
+          localStorage.setItem("theme", "dark");
+        }
+      });
+
       const body = document.querySelector("body");
       const colorInput = document.getElementById("color-picker");
       const colorDiv = document.querySelector(".color-div");

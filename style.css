@@ -1,6 +1,6 @@
 /* CSS Reset & Variables */
 :root {
-  /* Colors */
+  /* Dark Theme (Default) */
   --bg-body: #0a0a0a;
   --bg-card: #171717;
   --bg-card-hover: #262626;
@@ -24,6 +24,19 @@
 
   /* Animation */
   --transition: all 0.2s ease-in-out;
+}
+
+/* Light Theme Overrides */
+body.light-theme {
+  --bg-body: #ffffff;
+  --bg-card: #f4f4f5;
+  --bg-card-hover: #e4e4e7;
+  --text-main: #09090b;
+  --text-muted: #71717a;
+  --accent: #4f46e5;
+  --accent-glow: rgba(79, 70, 229, 0.1);
+  --border: #e4e4e7;
+  --border-hover: #d4d4d8;
 }
 
 * {
@@ -481,6 +494,56 @@ nav a:hover {
   font-family: var(--font-body);
   color: var(--text-muted);
   font-weight: 500;
+}
+
+/* Header Navigation Enhancements */
+.theme-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-right: var(--spacing-sm);
+}
+
+.theme-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-main);
+  border-color: var(--border-hover);
+}
+
+/* Secondary CTA Link (Resume) */
+.cta-link.secondary {
+  color: var(--text-muted);
+}
+
+.cta-link.secondary:hover {
+  color: var(--accent);
+}
+
+/* GitHub Stats */
+.github-stats-container {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  background: var(--bg-card);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.stats-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* Footer */
