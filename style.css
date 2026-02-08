@@ -79,12 +79,20 @@ header {
 
 nav {
   display: flex;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg); /* Slightly more gap for text */
 }
 
 nav a {
   color: var(--text-muted);
-  font-size: 1.25rem;
+  font-size: 1rem; /* Base size for text */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+nav a i {
+  font-size: 1.5rem; /* Larger icons */
 }
 
 nav a:hover {
