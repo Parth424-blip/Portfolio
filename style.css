@@ -405,6 +405,84 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+/* More Projects Section */
+.other-projects-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.other-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.small-project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  transition: var(--transition);
+}
+
+.small-project-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+}
+
+.small-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.small-project-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.small-project-links {
+  display: flex;
+  gap: var(--spacing-md);
+  color: var(--text-muted);
+}
+
+.small-project-links a:hover {
+  color: var(--text-main);
+}
+
+.small-project-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.small-project-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: auto; /* Pushes tech list to bottom */
+}
+
+.small-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: var(--spacing-md);
+}
+
+.small-tech-list span {
+  font-size: 0.7rem;
+  font-family: var(--font-body);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
 /* Footer */
 footer {
   text-align: center;
