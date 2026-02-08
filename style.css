@@ -546,6 +546,12 @@ nav a:hover {
   border-radius: 8px;
 }
 
+.stats-img.chart {
+  width: 100%;
+  padding: var(--spacing-md);
+  filter: brightness(0.9) contrast(1.1);
+}
+
 /* Footer */
 footer {
   text-align: center;
