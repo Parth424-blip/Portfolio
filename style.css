@@ -212,6 +212,66 @@ nav a:hover {
   border-color: var(--border-hover);
 }
 
+/* Certifications Section */
+.certifications-section {
+  margin-top: var(--spacing-xl);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.cert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: var(--spacing-md);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  transition: var(--transition);
+}
+
+.cert-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  background: var(--bg-card-hover);
+}
+
+.cert-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.issuer {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cert-link {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+}
+
+.cert-link:hover {
+  color: var(--text-main);
+  border-bottom-color: var(--accent);
+}
+
 /* Projects Section */
 .projects-section {
   margin-top: var(--spacing-xl);
